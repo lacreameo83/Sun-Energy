@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: small;
+}
+
+.sliderOutput-1 {
+  background-image: url("https://cdn.britannica.com/91/222691-050-E8BDF226/installing-solar-panels.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sliderOutput-2 {
+  background-image: url("https://sunking.com/wp-content/uploads/2022/10/Home-8000-Spec-Sheet_letter-05.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.HomeRenewed {
+  stroke-width: 100px;
+  color: rgb(252, 247, 247);
+  font-weight: 900;
+}
+
+.customerSupport {
+  animation-name: customerSupport;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes customerSupport {
+  0% {
+    border: 2px solid green;
+  }
+  25% {
+    border: 2px solid whitesmoke;
+  }
+  50% {
+    border: 2px solid greenyellow;
+  }
+  75% {
+    border: 2px solid whitesmoke;
+  }
+  100% {
+    border: 2px solid green;
+  }
+}
+
+.nothingFound {
+  animation-name: nothingFound;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes nothingFound {
+  0% {
+    color: red;
+  }
+  25% {
+    color: rgb(250, 179, 179);
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: rgb(196, 148, 148);
+  }
+  100% {
+    color: red;
+  }
+}
