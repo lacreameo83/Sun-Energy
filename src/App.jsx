@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { NavPage, HomePage, AboutPage, ContactPage, CataloguePage } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -27,6 +28,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+
+   
   return <RouterProvider router={router} />;
 }
 
