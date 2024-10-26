@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Button } from "@mui/material";
 
 import { Link } from "react-router-dom";
+import CustomerSuppport from "../CustomerSuppport";
 
 function SimpleSlider() {
   const settings = {
@@ -20,7 +21,7 @@ function SimpleSlider() {
   };
 
   return (
-    <div className="slider-container overflow-hidden">
+    <div className="slider-container overflow-hidden relative">
       <Slider {...settings}>
         <div className="h-[80vh] bg-slate-600 sliderOutput-1 overflow-scroll">
           <div className="h-[80vh] flex flex-col justify-center items-center gap-3 ">
@@ -48,6 +49,10 @@ function SimpleSlider() {
           </div>
         </div>
       </Slider>
+      <div className="fixed right-10 bottom-10 z-50">
+        
+        {/* <CustomerSuppport /> */}
+      </div>
     </div>
   );
 }
