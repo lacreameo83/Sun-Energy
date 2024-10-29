@@ -8,7 +8,7 @@ function NavPage() {
       <div className=" sticky top-0 z-20 bg-white">
         <Nav />
       </div>
-      <div className="bg-[#f8fdfd]">
+      <div className="">
         <Outlet />
       </div>
 
