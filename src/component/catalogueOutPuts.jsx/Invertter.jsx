@@ -15,7 +15,7 @@ function Inverter() {
         </div>
       )}
 
-      <div className=" grid grid-cols-2 gap-10 sm:grid-cols-4">
+      <div className=" grid grid-cols-2 gap-1 sm:gap-10 sm:grid-cols-4">
         {filteredData
           .filter((el) => el.categories === "Inverter")
           .map((el) => (

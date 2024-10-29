@@ -28,8 +28,8 @@ function AdvantageSolar() {
   }
 
   return (
-    <div className="relative h-[103vh] py-10 bg-[#34495e] text-white mt-[70px] sm:h-[40vh]">
-      <div className="bg-[#f5b041] h-[11vh] w-[100%] m-auto rounded-tr-2xl  rounded-tl-2xl absolute top-[-40px] flex  justify-around items-center">
+    <div className="relative h-[100vh] bg-[#34bbb4] py-10 font-[600]   mt-[70px] sm:h-[40vh]">
+      <div className="bg-[#dee7e7] h-[11vh] w-[100%] m-auto rounded-tr-2xl  rounded-tl-2xl absolute top-[-40px] flex  justify-around items-center">
         <div>
           <EmailTemplate
             logo={<LocationOnIcon />}
@@ -71,7 +71,8 @@ function AdvantageSolar() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-7 sm:flex justify-around mt-2 p-4 sm:p-0 sm:mt-10">
+
+      <div className="  grid grid-cols-1 gap-7 sm:flex justify-around mt-2 p-4 sm:p-0 sm:mt-10">
         <div>
           <img className="w-[60px] mb-2" src={image} alt="logo" />
           <p>
@@ -83,25 +84,25 @@ function AdvantageSolar() {
           <p>high-quality solar products and solutions.</p>
         </div>
         <div>
-          <h2 className="mb-3 hover:text-[#f5b041] font-[800]">About Us</h2>
+          <h2 className="mb-3 hoverItems font-[800]">About Us</h2>
           <ul className=" flex flex-col gap-3 ">
-            <li className="hover:text-[#f5b041]">Terms and Condition</li>
-            <li className="hover:text-[#f5b041]">About Us</li>
-            <li className="hover:text-[#f5b041]">Personal Info</li>
+            <li className="hoverItems">Terms and Condition</li>
+            <li className="hoverItems">About Us</li>
+            <li className="hoverItems">Personal Info</li>
           </ul>
         </div>
         <div>
-          <h1 className="mb-3 hover:text-[#f5b041] font-[800]">Our Company</h1>
+          <h1 className="mb-3 hoverItems font-[800]">Our Company</h1>
           <ul className=" flex flex-col gap-3 ">
-            <li className="hover:text-[#f5b041]">Delivery</li>
-            <li className="hover:text-[#f5b041]">Legal Notice</li>
-            <li className="hover:text-[#f5b041]">About Us</li>
-            <li className="hover:text-[#f5b041]">Contact Us</li>
+            <li className="hoverItems">Delivery</li>
+            <li className="hoverItems">Legal Notice</li>
+            <li className="hoverItems">About Us</li>
+            <li className="hoverItems">Contact Us</li>
           </ul>
         </div>
         <div>
           <form onSubmit={handleSubmit}>
-            <h2 className="mb-3 hover:text-[#f5b041] font-[800]">Newsletter</h2>
+            <h2 className="mb-3 hoverItems font-[800]">Newsletter</h2>
             <p>Our company our pride</p>
 
             <input
@@ -115,7 +116,7 @@ function AdvantageSolar() {
             <Button
               type="submit"
               variant="contained"
-              style={{ background: "#f5b041 " }}
+              style={{ background: "#34bbb4 " }}
             >
               SUBSCRIBE
             </Button>

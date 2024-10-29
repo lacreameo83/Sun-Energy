@@ -14,7 +14,7 @@ function Genarator() {
           Nothing found
         </div>
       )}
-      <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-1 sm:gap-10 sm:grid-cols-4">
         {filteredData
           .filter((el) => el.categories === "Mobile Genarator")
           .map((el) => (

@@ -10,33 +10,56 @@ function HomeProducts() {
   }, []);
   return (
     <div
-      className="h-[101vh] sm:h-[50vh] "
+      className="h-fit pb-8 px-4 sm:px-  sm:h-[76vh] bg-[#34bbb4] "
       data-aos="zoom-in"
       data-aos-duration="2000"
       data-aos-delay="300"
     >
-      <p className="text-[#FFC000] text-center my-5 text-[15px]">
+      <p className="text-[#FFC000] text-center pt-[10px]  text-[30px] font-[700]">
         Our Services
       </p>
-      <h2 className="font-900 text-[30px]  mb-12 text-center">
+      <h2 className="font-[500] text-[20px]  mb-12 text-center">
         Sustainable Energy
       </h2>
 
-      <div className="block sm:flex justify-around">
+      <div className="flex flex-col gap-[59px] sm:flex sm:flex-row justify-around">
         <ServiceTemplate
           img="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/8551443/1.jpg?3740"
           title="Sales of Solar Product"
-          uses="Yth handles with which you can carry the generator around with ease. However, solar generators can weigh up to 10 pounds, and they get heavier as the capacity increases"
+          uses="We sell a range of high-quality solar products designed to meet various energy needs, including:Solar Panels – High-efficiency panels suitable for residential, commercial, and industrial use.Solar Inverters – Devices that convert DC power from the panels into AC power for homes and businesses.
+Solar Batteries – Storage solutions for keeping excess solar power.
+Solar Charge Controllers –These products are designed to reduce energy costs, offer more grid independence, and support sustainable energy use.
+
+
+
+
+
+
+"
         />
         <ServiceTemplate
           img="https://arka360.com/ros/content/images/2023/05/pasted-image-0--11---1--compressed.jpg"
           title="Solar Installation"
-          uses="to connect several devices to build a solar power system generating energy from the sun. The sun's light energy is then converted into electricity, which is used for domestic and industrial activities. Solar power has a relatively simple operating principle"
+          uses="We provide a wide range of solar products and installation services to meet diverse energy needs. Our offerings include solar panels, inverters, batteries, mounting systems, and solar charge controllers. Additionally, we offer expert solar installation services to ensure optimal performance and longevity of your solar setup, tailored to both residential and commercial applications.
+
+
+
+
+
+
+"
         />
         <ServiceTemplate
           img="https://5.imimg.com/data5/YX/JH/MY-6617772/solar-panel-maintenance-service-250x250.jpg"
           title="Solar Maintenance"
-          uses="As a proactive measure, panel management ensures that all of your patients are current on their basic preventive care such as screenings and immunizations. Your clinical staff can identify and reach out to patients who may not have an upcoming appointment to ensure they are receiving the care they need"
+          uses="We provide reliable Solar Maintenance services to ensure your solar systems operate at peak performance. Our maintenance offerings include cleaning and inspecting panels, checking inverters, assessing wiring, and identifying any performance issues. With regular maintenance, we help extend the life of your solar system and maximize your energy output.
+
+
+
+
+
+
+"
         />
       </div>
     </div>

@@ -83,47 +83,47 @@ function Catalogue() {
 
   return (
     <div className="  h-fit grid grid-cols-1  sm:flex mt-5 ">
-      <section className=" shadow-lg h-fit sm:w-[300px] ">
-        <ul className="flex gap-2   h-fit overflow-scroll sm:flex-col sm:gap-5 p-5">
+      <section className="sm:bg-[#34bbb4]    ">
+        <ul className="flex gap-2  h-fit overflow-scroll sm:overflow-hidden sm:flex-col sm:gap-5 p-5">
           <li
             onClick={handleProducts}
-            className=" shadow-md p-2 hover:text-green-400 font-600 text-[14px]  "
+            className=" shadow-md p-2 hover:text-green-400 sm:hover:text-[#ffffE1] font-800 text-[14px]  "
           >
             All Solar products
           </li>
           <li
             onClick={handleInverter}
-            className="shadow-md p-2 hover:text-green-400 font-600 text-[14px] "
+            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px] "
           >
             Inverter
           </li>
           <li
             onClick={handleBatteries}
-            className="shadow-md p-2 hover:text-green-400 font-600 text-[14px]"
+            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
           >
             Batteris
           </li>
           <li
             onClick={handleGenaretor}
-            className="shadow-md p-2 hover:text-green-400 font-600 text-[14px]"
+            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
           >
             Solar Genaratior
           </li>
           <li
             onClick={handleCamera}
-            className="shadow-md p-2 hover:text-green-400 font-600 text-[14px]"
+            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
           >
             Solar Powered CCTV Camera
           </li>
           <li
             onClick={handlePanels}
-            className="shadow-md p-2 hover:text-green-400 font-600 text-[14px]"
+            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
           >
             Solar Panels
           </li>
           <li
             onClick={handleMttp}
-            className="shadow-md p-2 hover:text-green-400 font-600 text-[14px]"
+            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-600 text-[14px]"
           >
             MMTP
           </li>

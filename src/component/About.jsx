@@ -52,8 +52,7 @@ function About() {
             <Link to="/contact">
               <Button
                 variant="contained"
-                color="success"
-                style={{ marginTop: "10px" }}
+                style={{ marginTop: "10px", background: "#34bbb4" }}
               >
                 Contact Us
               </Button>

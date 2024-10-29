@@ -30,7 +30,7 @@ function AlProducts() {
         </div>
 
         <div className="absolute ml-2  font-medium bottom-2  opacity-0 group-hover:opacity-100  transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>
@@ -47,7 +47,7 @@ function AlProducts() {
             </div>
           ))}
         <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>
@@ -66,7 +66,7 @@ function AlProducts() {
             </div>
           ))}
         <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>
@@ -85,7 +85,7 @@ function AlProducts() {
             </div>
           ))}
         <div className="absolute ml-2  font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>
@@ -104,7 +104,7 @@ function AlProducts() {
             </div>
           ))}
         <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>
@@ -123,7 +123,7 @@ function AlProducts() {
             </div>
           ))}
         <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>
@@ -141,7 +141,7 @@ function AlProducts() {
             </div>
           ))}
         <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" color="success">
+          <Button variant="contained" sx={{ background: "#34bbb4" }}>
             View products
           </Button>
         </div>

@@ -22,16 +22,34 @@ body {
 
 
 .sliderOutput-1 {
-  background-image: url("https://cdn.britannica.com/91/222691-050-E8BDF226/installing-solar-panels.jpg");
+  background-image: url("https://m.media-amazon.com/images/I/71fEvChPciL.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .sliderOutput-2 {
-  background-image: url("https://sunking.com/wp-content/uploads/2022/10/Home-8000-Spec-Sheet_letter-05.png");
+  background-image: url("https://infosolarshop.com/wp-content/uploads/2023/05/InfoSolarShop-293515.webp");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
+
+.sliderOutput-3 {
+  background-image: url("https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/1246863/1.jpg?7477");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sliderOutput-4 {
+  background-image: url("https://nombimz.com.ng/wp-content/uploads/2017/06/9134ec3bae5b1791198411c7803a0808_medium.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hoverItems:hover{
+  color: #34bbb4;
+  cursor: pointer;
+}
+
 .HomeRenewed {
   stroke-width: 100px;
   color: rgb(252, 247, 247);

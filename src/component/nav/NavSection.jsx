@@ -15,18 +15,18 @@ function NavSection() {
       <img src={Image} alt="jus solar company logo" className="w-12" />
       <ul className="flex gap-5 items-center  md:gap-10 ">
         <Link to="/">
-          <li className="hover:text-green-300 ">Home</li>
+          <li className="hoverItems ">Home</li>
         </Link>
         <Link to="about">
-          <li className="hover:text-green-300">About</li>
+          <li className="hoverItems">About</li>
         </Link>
         <Link to="catalogue">
-          <li className="hover:text-green-300">Catalogue </li>
+          <li className="hoverItems">Catalogue </li>
         </Link>
 
         {/* <li className="hover:text-green-300">Blog</li> */}
         <Link to="contact">
-          <li className="hover:text-green-300">Contact Us</li>
+          <li className="hoverItems">Contact </li>
         </Link>
       </ul>
       <div>
@@ -38,9 +38,9 @@ function NavSection() {
           value={search}
         />
         {/* for small screen */}
-        <div className="block hover:text-green-400 cursor-pointer sm:hidden md:hidden lg:hidden ">
+        {/* <div className="block hover:text-green-400 cursor-pointer sm:hidden md:hidden lg:hidden ">
           <SearchIcon />
-        </div>
+        </div> */}
       </div>
     </div>
   );

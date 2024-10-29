@@ -12,12 +12,12 @@ function Camera() {
           Nothing found
         </div>
       )}
-      <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-1 sm:gap-10 sm:grid-cols-4">
         {filteredData
           .filter((el) => el.categories === "Solar Camera")
           .map((el) => (
             <div key={el.id}>
-              <div className="shadow-lg ">
+              <div className="shadow-lg h-[50vh] ">
                 <p
                   key={el.id}
                   className="text-center p-3 text-[1.1em] font-semibold"

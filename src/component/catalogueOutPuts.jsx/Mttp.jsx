@@ -13,11 +13,11 @@ function Mttp() {
           Nothing found
         </div>
       )}
-      <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-1 sm:gap-10 sm:grid-cols-4">
         {filteredData
           .filter((el) => el.categories === "MPPT Charger")
           .map((el) => (
-            <div className="shadow-lg ">
+            <div className="shadow-lg  ">
               <p
                 key={el.id}
                 className="text-center p-3 text-[1.1em] font-semibold"
