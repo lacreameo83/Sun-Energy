@@ -29,7 +29,7 @@ function AdvantageSolar() {
 
   return (
     <div className="relative h-[100vh] bg-[#34bbb4] py-10 font-[600]   mt-[70px] sm:h-[40vh]">
-      <div className="bg-[#dee7e7] h-[11vh] w-[100%] m-auto rounded-tr-2xl  rounded-tl-2xl absolute top-[-40px] flex  justify-around items-center">
+      <div className="bg-[#B6EFEE] h-[11vh] w-[100%]  rounded-tr-2xl  rounded-tl-2xl absolute top-[-40px] flex  justify-between px-16 items-center">
         <div>
           <EmailTemplate
             logo={<LocationOnIcon />}
@@ -72,7 +72,7 @@ function AdvantageSolar() {
         </div>
       </div>
 
-      <div className="  grid grid-cols-1 gap-7 sm:flex justify-around mt-2 p-4 sm:p-0 sm:mt-10">
+      <div className="  grid grid-cols-1 sm:grid sm:grid-cols-4 gap-7  sm:px-16 sm:mt-10">
         <div>
           <img className="w-[60px] mb-2" src={image} alt="logo" />
           <p>
@@ -83,7 +83,7 @@ function AdvantageSolar() {
           <p> We specialize in offering a comprehensive range of</p>
           <p>high-quality solar products and solutions.</p>
         </div>
-        <div>
+        <div className="sm:ml-40">
           <h2 className="mb-3 hoverItems font-[800]">About Us</h2>
           <ul className=" flex flex-col gap-3 ">
             <li className="hoverItems">Terms and Condition</li>
@@ -91,7 +91,7 @@ function AdvantageSolar() {
             <li className="hoverItems">Personal Info</li>
           </ul>
         </div>
-        <div>
+        <div className="sm:ml-40">
           <h1 className="mb-3 hoverItems font-[800]">Our Company</h1>
           <ul className=" flex flex-col gap-3 ">
             <li className="hoverItems">Delivery</li>
@@ -100,13 +100,13 @@ function AdvantageSolar() {
             <li className="hoverItems">Contact Us</li>
           </ul>
         </div>
-        <div>
+        <div className="sm:ml-40">
           <form onSubmit={handleSubmit}>
             <h2 className="mb-3 hoverItems font-[800]">Newsletter</h2>
             <p>Our company our pride</p>
 
             <input
-              className="p-[3px] bg-transparent border-stone-300 border-[2px] my-5 block w-[200px] sm:p-[10px]"
+              className="p-[3px] bg-transparent text-black border-black outline-none border-[1px] my-5 block w-[200px] sm:p-[10px]"
               type="email"
               placeholder="Enter your email address here"
               value={email}

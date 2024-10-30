@@ -9,7 +9,7 @@ function ContactUs() {
     <div className="h-[80vh] p-3 ">
       <h1 className="text-center font-bold text-[25px] my-5">Contact Us</h1>
       <div className="grid grid-cols-1 h-[60vh] sm:grid-cols-2">
-        <div className="hidden sm:block sliderOutput-1"></div>
+        <div className="hidden sm:block sliderOutput-4"></div>
         <div className="flex flex-col justify-evenly p-4">
           <div>
             <h2 className="font-bold text-[25px] my-2">

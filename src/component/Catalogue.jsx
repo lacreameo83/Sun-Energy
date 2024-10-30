@@ -82,7 +82,7 @@ function Catalogue() {
   };
 
   return (
-    <div className="  h-fit grid grid-cols-1  sm:flex mt-5 ">
+    <div className="  h-fit grid grid-cols-1   sm:flex ">
       <section className="sm:bg-[#34bbb4]    ">
         <ul className="flex gap-2  h-fit overflow-scroll sm:overflow-hidden sm:flex-col sm:gap-5 p-5">
           <li
