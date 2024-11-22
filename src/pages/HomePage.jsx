@@ -4,7 +4,7 @@ import UsesOfSolarPanel from "../component/homesection/UsesofSolarPanel";
 
 function HomePage() {
   return (
-    <div>
+    <div className="w-[100vw]">
       <SimpleSlider />
       <HomeProducts />
 

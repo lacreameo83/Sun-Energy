@@ -103,9 +103,9 @@ function Catalogue() {
   };
 
   return (
-    <div className="h-auto grid grid-cols-1 sm:flex bg-gray-50">
-      <section className="bg-[#34bbb4]  w-full sm:w-auto sm:h-screen">
-        <ul className="flex gap-2 h-fit sm:overflow-hidden sm:flex-col sm:gap-5 p-5">
+    <div className=" sm:flex bg-black">
+      <section className="bg-[#34bbb4]  sm:w-[300px] h-auto sm:h-screen overflow-x-auto sm:overflow-hidden  sm:flex-col p-5">
+        <ul className="flex gap-2 h-fit sm:flex-col sm:gap-5 sm:overflow-y-auto sm:h-[calc(100vh-10rem)]">
           {[
             { label: "All Solar Products", onClick: handleProducts },
             { label: "Inverter", onClick: handleInverter },
@@ -118,14 +118,14 @@ function Catalogue() {
             <li
               key={index}
               onClick={item.onClick}
-              className="shadow-md  p-2 w-[400px] text-[5px]  sm:w-[17em] hover:text-green-400 sm:hover:text-[#ffffE1] sm:text-[14px] font-bold transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer bg-white rounded-md sm:bg-transparent"
+              className="shadow-md w-[400px] p-2 text-xs sm:w-[17em] hover:text-green-400 sm:hover:text-[#ffffE1] sm:text-[14px] font-bold transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer bg-white rounded-md sm:bg-transparent"
             >
               {item.label}
             </li>
           ))}
         </ul>
       </section>
-      <div className="m-4 w-full sm:w-[75%] overflow-hidden">
+      <div className="sm:m-4 w-[70%]  text-white sm:w-[75%] overflow-x-auto sm:overflow-hidden">
         {isAllProducts && <AlProducts />}
         {isInverter && <FirstDisplayInver />}
         {isBatteries && <BatteriesFirstDisplay />}

@@ -10,7 +10,7 @@ function HomeProducts() {
   }, []);
   return (
     <div
-      className="h-fit mt-2 pb-8 px-4   sm:h-[76vh] xl:h-[55vh]   bg-[#34bbb4] "
+      className="h-fit mt-2 pb-8 px-4   sm:h-[76vh] md:h-fit xl:h-[55vh]   bg-[#34bbb4] "
       // data-aos="zoom-in"
       // data-aos-duration="2000"
       // data-aos-delay="300"
@@ -22,7 +22,7 @@ function HomeProducts() {
         {/* Sustainable Energy */}
       </h2>
 
-      <div className="flex flex-col gap-[59px] sm:flex sm:flex-row justify-around">
+      <div className="flex flex-col gap-[59px]  sm:grid grid-cols-1 lg:grid-cols-3 justify-around">
         <ServiceTemplate
           img="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/8551443/1.jpg?3740"
           title="Sales of Solar Product"

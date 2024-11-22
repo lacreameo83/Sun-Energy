@@ -3,27 +3,31 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="h-[92vh] sm:h-[120vh] md:h-[110vh] xl:h-[120vh]  p-2 ">
+    <div className="h-[92vh]  bg-black text-white sm:h-[120vh] md:h-[110vh] xl:h-[120vh]  p-2 ">
       <h1 className="text-center font-bold text-[20px] my-2">About Us</h1>
-      <div className="grid grid-cols-1 h-[60vh] sm:grid-cols-2">
-        <div className="hidden sm:block w-[400px] h-[400px] sliderOutput-1"></div>
+      <div className="grid grid-cols-1 h-fit sm:grid-cols-2">
+        <div className=" flex items-center justify-center">
+          
+          <div className="hidden sm:block w-[400px] h-[400px] sliderOutput-1"></div>
+        </div>
+
         <div className="flex flex-col justify-evenly p-4">
           <div>
-            <h2 className="font-bold text-[12px] my-1">
+            <h2 className="font-bold  sm:text-[15px] my-1">
               JUS SOLAR is an Indigenous Company Incorporated in 2018 with RC:
               1525204 to carry out the business of Renewable Energy Ranging from
               SALES, DESIGNS & INSTALLATION of all kinds of solar products for
               Industrial & Domestic purposes.
             </h2>
-            <p className="text-[11px]">
+            <p className="text-[12px]">
               We are committed to providing the highest quality products &
               services at competitive prices with technical support by highly
               trained technical personnel providing added-value to you. In:
             </p>
           </div>
           <div>
-            <p className=" font-bold text-[12px] my-1">WHAT WE DO :</p>
-            <ol className="text-[10px]">
+            <p className=" font-bold text-[15px] my-1">WHAT WE DO :</p>
+            <ol className="text-[12px]">
               <li> SALES OF SOLAR PRODUCTS.</li>
               <li> ELECTRICAL ENGINEERING </li>
               <li> SOLAR ENERGY SYSTEM DESIGNS .</li>

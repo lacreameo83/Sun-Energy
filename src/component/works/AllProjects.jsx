@@ -22,7 +22,7 @@ function AllProjects() {
   };
 
   return (
-    <div className="flex flex-col gap-10 overflow-x-hidden mt-10">
+    <div className="flex bg-black flex-col gap-10 overflow-x-hidden mt-10">
       <p className="text-center font-bold text-[20px] text-[#34bbb4] ">
         Some of Our projects
       </p>

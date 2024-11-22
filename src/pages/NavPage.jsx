@@ -7,17 +7,19 @@ function NavPage() {
   return (
     <div className="w-[100vw]">
       {/* <div className="ball1 blurred-ball h-[20px] w-[40px] top-[10px] left-[10px] sm:w-[200px] sm:h-[200px] sm:top-[50%] sm:left-[5px] "></div> */}
-      <div className=" sticky top-0 z-20 ">
+      <div className="  ">
         <Nav />
       </div>
-      {/* <div className="h-fit w-[100vw] flex justify-center items-center flex-col"> */}
-        <div className="w-[100vw]">
+      <div className="bg-black">
+        {/* <div className="h-fit w-[100vw] flex justify-center items-center flex-col"> */}
+        <div className="w-[100vw] ">
           <Outlet />
-        {/* </div> */}
+          {/* </div> */}
+        </div>
+        {/* <Footer1 /> */}
+        <Footer2 />
+        {/* <CopyRigtt /> */}
       </div>
-      {/* <Footer1 /> */}
-      <Footer2 />
-      {/* <CopyRigtt /> */}
     </div>
   );
 }
