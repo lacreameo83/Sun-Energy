@@ -1,6 +1,8 @@
 import { useEffect } from "react";
+import AllProjects from "./component/works/AllProjects";
 import { NavPage, HomePage, AboutPage, ContactPage, CataloguePage } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import FirstDisplayInver from "./component/inverter/infinit/FirstDisplayInver";
 
 const router = createBrowserRouter([
   {
@@ -23,9 +25,20 @@ const router = createBrowserRouter([
         path: "/catalogue",
         element: <CataloguePage />,
       },
+      {
+        path: "/projects",
+        element: <AllProjects />,
+        children: [
+          {
+            path: "first-display-inverter",
+            element: <FirstDisplayInver />,
+          },
+        ],
+      },
     ],
   },
 ]);
+
 
 function App() {
 

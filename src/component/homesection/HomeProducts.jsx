@@ -10,16 +10,16 @@ function HomeProducts() {
   }, []);
   return (
     <div
-      className="h-fit pb-8 px-4 sm:px-  sm:h-[76vh] bg-[#34bbb4] "
-      data-aos="zoom-in"
-      data-aos-duration="2000"
-      data-aos-delay="300"
+      className="h-fit mt-2 pb-8 px-4   sm:h-[76vh] xl:h-[55vh]   bg-[#34bbb4] "
+      // data-aos="zoom-in"
+      // data-aos-duration="2000"
+      // data-aos-delay="300"
     >
-      <p className="text-[#FFC000] text-center pt-[10px]  text-[30px] font-[700]">
+      <p className="text-[#FFC000] text-center pt-[10px] mb-12  text-[30px] font-[700]">
         Our Services
       </p>
       <h2 className="font-[500] text-[20px]  mb-12 text-center">
-        Sustainable Energy
+        {/* Sustainable Energy */}
       </h2>
 
       <div className="flex flex-col gap-[59px] sm:flex sm:flex-row justify-around">

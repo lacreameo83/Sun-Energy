@@ -1,13 +1,25 @@
-import { useState } from "react";
-import Inverter from "./catalogueOutPuts.jsx/Invertter";
-import Batteries from "./catalogueOutPuts.jsx/Batteries";
+import { useContext, useState } from "react";
+import BatteriesFirstDisplay from "./battries/BatteryFirstDisplay";
 import Camera from "./catalogueOutPuts.jsx/Camera";
-import Panels from "./catalogueOutPuts.jsx/Panels";
-import Mttp from "./catalogueOutPuts.jsx/Mttp";
-import Genarator from "./catalogueOutPuts.jsx/Genarator";
+import SolarPanel from "./panel/SolarPanel";
+import MpptFirstDisplay from "./mppt/MpptFirstDispaly";
+import SolargenaratorFirstDisplay from "./solargenarator/SolargenaratorFirstDisplay";
 import AlProducts from "./catalogueOutPuts.jsx/AlProducts";
+import FirstDisplayInver from "./inverter/infinit/FirstDisplayInver";
+import { Globalcontext } from "./context/Globlacontext";
 
 function Catalogue() {
+  const {
+    batterydisplay,
+    setbatterydisplay,
+    solarGendisplay,
+    setsolarGendisplay,
+    solarPaneldisplay,
+    setSolarPanel,
+    mpptdisplay,
+    setmpptdisplay,
+  } = useContext(Globalcontext);
+
   const [isInverter, SetIsInverter] = useState(false);
   const [isBatteries, SetIsBatteries] = useState(false);
   const [isCamera, SetIsCamera] = useState(false);
@@ -27,7 +39,7 @@ function Catalogue() {
   };
 
   const handleInverter = () => {
-    SetIsInverter(true);
+    SetIsInverter(!isInverter);
     SetIsBatteries(false);
     SetIsCamera(false);
     SetIsPanels(false);
@@ -35,6 +47,7 @@ function Catalogue() {
     SetIsGenarator(false);
     SetIsAllProducts(false);
   };
+
   const handleBatteries = () => {
     SetIsInverter(false);
     SetIsBatteries(true);
@@ -43,7 +56,9 @@ function Catalogue() {
     SetIsMttp(false);
     SetIsGenarator(false);
     SetIsAllProducts(false);
+    setbatterydisplay(!batterydisplay);
   };
+
   const handleCamera = () => {
     SetIsInverter(false);
     SetIsBatteries(false);
@@ -53,7 +68,9 @@ function Catalogue() {
     SetIsGenarator(false);
     SetIsAllProducts(false);
   };
+
   const handlePanels = () => {
+    setSolarPanel(!solarPaneldisplay);
     SetIsInverter(false);
     SetIsBatteries(false);
     SetIsCamera(false);
@@ -62,7 +79,9 @@ function Catalogue() {
     SetIsGenarator(false);
     SetIsAllProducts(false);
   };
+
   const handleMttp = () => {
+    setmpptdisplay(!mpptdisplay);
     SetIsMttp(true);
     SetIsInverter(false);
     SetIsBatteries(false);
@@ -71,7 +90,9 @@ function Catalogue() {
     SetIsGenarator(false);
     SetIsAllProducts(false);
   };
+
   const handleGenaretor = () => {
+    setsolarGendisplay(!solarGendisplay);
     SetIsGenarator(true);
     SetIsMttp(false);
     SetIsInverter(false);
@@ -82,61 +103,36 @@ function Catalogue() {
   };
 
   return (
-    <div className="  h-fit grid grid-cols-1   sm:flex ">
-      <section className="sm:bg-[#34bbb4]    ">
-        <ul className="flex gap-2  h-fit overflow-scroll sm:overflow-hidden sm:flex-col sm:gap-5 p-5">
-          <li
-            onClick={handleProducts}
-            className=" shadow-md p-2 hover:text-green-400 sm:hover:text-[#ffffE1] font-800 text-[14px]  "
-          >
-            All Solar products
-          </li>
-          <li
-            onClick={handleInverter}
-            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px] "
-          >
-            Inverter
-          </li>
-          <li
-            onClick={handleBatteries}
-            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
-          >
-            Batteris
-          </li>
-          <li
-            onClick={handleGenaretor}
-            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
-          >
-            Solar Genaratior
-          </li>
-          <li
-            onClick={handleCamera}
-            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
-          >
-            Solar Powered CCTV Camera
-          </li>
-          <li
-            onClick={handlePanels}
-            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-800 text-[14px]"
-          >
-            Solar Panels
-          </li>
-          <li
-            onClick={handleMttp}
-            className="shadow-md p-2 hover:text-green-400  sm:hover:text-[#ffffE1] font-600 text-[14px]"
-          >
-            MMTP
-          </li>
+    <div className="h-auto grid grid-cols-1 sm:flex bg-gray-50">
+      <section className="bg-[#34bbb4]  w-full sm:w-auto sm:h-screen">
+        <ul className="flex gap-2 h-fit sm:overflow-hidden sm:flex-col sm:gap-5 p-5">
+          {[
+            { label: "All Solar Products", onClick: handleProducts },
+            { label: "Inverter", onClick: handleInverter },
+            { label: "Batteries", onClick: handleBatteries },
+            { label: "Solar Generator", onClick: handleGenaretor },
+            { label: "Solar Powered CCTV Camera", onClick: handleCamera },
+            { label: "Solar Panels", onClick: handlePanels },
+            { label: "MMTP", onClick: handleMttp },
+          ].map((item, index) => (
+            <li
+              key={index}
+              onClick={item.onClick}
+              className="shadow-md  p-2 w-[400px] text-[5px]  sm:w-[17em] hover:text-green-400 sm:hover:text-[#ffffE1] sm:text-[14px] font-bold transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer bg-white rounded-md sm:bg-transparent"
+            >
+              {item.label}
+            </li>
+          ))}
         </ul>
       </section>
-      <div className="m-4">
+      <div className="m-4 w-full sm:w-[75%] overflow-hidden">
         {isAllProducts && <AlProducts />}
-        {isInverter && <Inverter />}
-        {isBatteries && <Batteries />}
+        {isInverter && <FirstDisplayInver />}
+        {isBatteries && <BatteriesFirstDisplay />}
         {isCamera && <Camera />}
-        {isPanels && <Panels />}
-        {isMttp && <Mttp />}
-        {isGenarator && <Genarator />}
+        {isPanels && <SolarPanel />}
+        {isMttp && <MpptFirstDisplay />}
+        {isGenarator && <SolargenaratorFirstDisplay />}
       </div>
     </div>
   );

@@ -1,151 +1,65 @@
-import { useContext } from "react";
-import { Button } from "@mui/material";
-import { Globalcontext } from "../context/Globlacontext";
+import { useState } from "react";
+import FirstDisplayInver from "../inverter/infinit/FirstDisplayInver";
+import Products from "../templates/Products";
+import MpptFirstDisplay from "../mppt/MpptFirstDispaly";
+import SolarPanel from "../panel/SolarPanel";
+import Camera from "./Camera";
+import SolargenaratorFirstDisplay from "../solargenarator/SolargenaratorFirstDisplay";
+import BatteriesFirstDisplay from "../battries/BatteryFirstDisplay";
 
 function AlProducts() {
-  const { filteredData } = useContext(Globalcontext);
+  const [selectedProduct, setSelectedProduct] = useState("allProducts");
+
+  const handleSelectProduct = (product) => {
+    setSelectedProduct(product);
+  };
+
   return (
-    <div className="grid grid-cols-2  h-fit gap-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
-      <div className="w-[45vw] shadow-lg  h-[50vh] relative group sm:w-[20vw]">
-        {/* if no data */}
-        {filteredData.length ? (
-          filteredData.map((item) => <div key={item.id}>{item.title}</div>)
-        ) : (
-          <div className="text-red-500 nothingFound font-medium">
-            Nothing found
-          </div>
-        )}
-        <div>
-          {filteredData
-            .filter((el) => el.id === 5)
-            .map((el) => (
-              <div key={el.key}>
-                <h2 className="py-3 text-center font-medium text-[18px]">
-                  Inverter
-                </h2>
-
-                <img className="h-[250px]" src={el.image} />
-              </div>
-            ))}
+    <div className="w-full max-w-7xl mx-auto py-10">
+      {/* All Products Grid */}
+      {selectedProduct === "allProducts" ? (
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+          <Products
+            onClick={() => handleSelectProduct("inverter")}
+            name="Inverter"
+            img="https://energymall.ng/wp-content/uploads/2021/08/1kva-12v-solar-inverter-PWM.jpg"
+          />
+          <Products
+            onClick={() => handleSelectProduct("battery")}
+            name="Battery"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCTGPLU4r6OWC40yhctwvCTWlPW9fGoLXYug&s"
+          />
+          <Products
+            onClick={() => handleSelectProduct("generator")}
+            name="Solar Generator"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxhMSibRnpfP4rQx3erCFt4OdZcuw9moNWTQ&s"
+          />
+          <Products
+            onClick={() => handleSelectProduct("camera")}
+            name="Solar CCTV Camera"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmZ_JsIFKSPDYso7C50UX090KM886CrDObjg&s"
+          />
+          <Products
+            onClick={() => handleSelectProduct("panels")}
+            name="Solar Panels"
+            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW5W9btfybVCGHSQ4hdXGO3K7sjtVgQuL6mw&s"
+          />
+          <Products
+            onClick={() => handleSelectProduct("controller")}
+            name="Solar Charger Controller"
+            img="https://image.made-in-china.com/2f0j00ImJlyEUzZPqL/50A-Mttp-Solar-Charger-Controller-Solar-System-PWM-Solar-Charge-Controller.webp"
+          />
         </div>
-
-        <div className="absolute ml-2  font-medium bottom-2  opacity-0 group-hover:opacity-100  transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
+      ) : (
+        <div className="flex flex-col items-center justify-center w-full">
+          {selectedProduct === "inverter" && <FirstDisplayInver />}
+          {selectedProduct === "battery" && <BatteriesFirstDisplay />}
+          {selectedProduct === "generator" && <SolargenaratorFirstDisplay />}
+          {selectedProduct === "panels" && <SolarPanel />}
+          {selectedProduct === "camera" && <Camera />}
+          {selectedProduct === "controller" && <MpptFirstDisplay />}
         </div>
-      </div>
-      {/* 2 */}
-      <div className="shadow-lg w-[45vw] h-[50vh] relative group sm:w-[20vw]">
-        {filteredData
-          .filter((el) => el.id === 10)
-          .map((el) => (
-            <div key={el.id}>
-              <h2 className="py-3 text-center font-medium text-[18px]">MTTP</h2>
-
-              <img className="h-[250px]" src={el.image} />
-            </div>
-          ))}
-        <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
-        </div>
-      </div>
-      {/* 3 */}
-      <div className="w-[45vw] shadow-lg  h-[50vh] relative group sm:w-[20vw]">
-        {filteredData
-          .filter((el) => el.id === 14)
-          .map((el) => (
-            <div key={el.id}>
-              <h2 className="py-3 text-center font-medium text-[18px]">
-                CCTV Solar Camera
-              </h2>
-
-              <img className="h-[250px]" src={el.image} />
-            </div>
-          ))}
-        <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
-        </div>
-      </div>
-      {/* 4 */}
-      <div className="w-[45vw] shadow-lg  h-[50vh] relative group sm:w-[20vw]">
-        {filteredData
-          .filter((el) => el.id === 18)
-          .map((el) => (
-            <div key={el.id}>
-              <h2 className="py-3 text-center font-medium text-[18px]">
-                Solar Powered Fan
-              </h2>
-
-              <img className="h-[250px]" src={el.image} />
-            </div>
-          ))}
-        <div className="absolute ml-2  font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
-        </div>
-      </div>
-      {/* 5 */}
-      <div className="w-[45vw] shadow-lg  h-[50vh] relative group sm:w-[20vw]">
-        {filteredData
-          .filter((el) => el.id === 22)
-          .map((el) => (
-            <div key={el.key}>
-              <h2 className="py-3 text-center font-medium text-[18px]">
-                Mobile Genaratior
-              </h2>
-
-              <img className="h-[250px]" src={el.image} />
-            </div>
-          ))}
-        <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
-        </div>
-      </div>
-      {/* 6 */}
-      <div className="w-[45vw] shadow-lg  h-[50vh] relative group sm:w-[20vw]">
-        {filteredData
-          .filter((el) => el.id === 25)
-          .map((el) => (
-            <div key={el.id}>
-              <h2 className="py-3 text-center font-medium text-[18px]">
-                Batterie
-              </h2>
-
-              <img className="h-[250px]" src={el.image} />
-            </div>
-          ))}
-        <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
-        </div>
-      </div>
-      <div className="w-[45vw] shadow-lg  h-[50vh] relative group sm:w-[20vw]">
-        {filteredData
-          .filter((el) => el.id === 20)
-          .map((el) => (
-            <div key={el.id}>
-              <h2 className="py-3 text-center font-medium text-[18px]">
-                Solar Sreet Light
-              </h2>
-
-              <img className="h-[250px]" src={el.image} />
-            </div>
-          ))}
-        <div className="absolute ml-2   font-medium bottom-2  opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <Button variant="contained" sx={{ background: "#34bbb4" }}>
-            View products
-          </Button>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

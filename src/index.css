@@ -19,7 +19,43 @@ body {
   font-family: Commissioner;
 }
 
+.glass-div {
+  /* width: 95vw; */
+  height: fit;
+background-color: rgba(255, 255, 255, 0.3);;
+  backdrop-filter: blur(15px); 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
+.blurred-ball {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px); 
+  opacity: 0.9; 
+  animation: moveBall 10s infinite alternate;
+}
+
+
+.ball1 {
+  /* background-color: rgba(99, 102, 241, 0.8);  */
+   background-image: url('../../../public/assets/jus-Solat-Logo.png'); /* Adjust the path as per the file location */
+  background-size: cover; /* Make the image cover the entire element */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+}
+
+@keyframes moveBall {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5vw, -3vh); 
+  }
+  100% {
+    transform: translate(-3vw, 5vh);
+  }
+}
 
 .sliderOutput-1 {
   background-image: url("https://m.media-amazon.com/images/I/71fEvChPciL.jpg");
@@ -46,7 +82,7 @@ body {
 }
 
 .hoverItems:hover{
-  color: #34bbb4;
+  color: #e7f4f3;
   cursor: pointer;
 }
 

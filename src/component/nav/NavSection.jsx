@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { Globalcontext } from "../context/Globlacontext";
-import  Image  from  '../../../public/assets/jus-Solat-Logo.png'
+import Image from "../../../public/assets/jus-Solat-Logo.png";
 
 function NavSection() {
   const { search, handleSearch } = useContext(Globalcontext);
@@ -11,9 +11,9 @@ function NavSection() {
   //   SearchOutPut();
   // }, [search]);
   return (
-    <div className="flex items-center gap-5   md:justify-between ">
-      <img src={Image} alt="jus solar company logo" className="w-12" />
-      <ul className="flex gap-5 items-center  md:gap-10 ">
+    <div className="flex items-center gap-1 sm:gap-5 text-[10px]  md:justify-between ">
+      <img src={Image} alt="jus solar company logo" className="w-10" />
+      <ul className="flex gap-1  sm:gap-5 items-center  md:gap-3 ">
         <Link to="/">
           <li className="hoverItems ">Home</li>
         </Link>
@@ -28,20 +28,11 @@ function NavSection() {
         <Link to="contact">
           <li className="hoverItems">Contact </li>
         </Link>
+        <Link to="/projects">
+          <li>Projects</li>
+        </Link>
       </ul>
-      <div>
-        <input
-          className="hidden  md:block outline-[none] rounded-lg  border-[2px] p-1 w-80 "
-          type="text"
-          placeholder="search"
-          onChange={handleSearch}
-          value={search}
-        />
-        {/* for small screen */}
-        {/* <div className="block hover:text-green-400 cursor-pointer sm:hidden md:hidden lg:hidden ">
-          <SearchIcon />
-        </div> */}
-      </div>
+      
     </div>
   );
 }

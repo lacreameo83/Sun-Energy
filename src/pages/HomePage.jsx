@@ -11,6 +11,7 @@ function HomePage() {
       <div className="hidden  lg:block">
         <UsesOfSolarPanel />
       </div>
+      
     </div>
   );
 }
