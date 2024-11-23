@@ -18,7 +18,7 @@ function SimpleSlider() {
 
   return (
     <div className="sm:h-[80vh] flex items-center">
-      <div className="h-[80vh] px-4 md:px-8 xl:px-16 flex justify-center items-center sm:grid sm:grid-cols-2">
+      <div className="h-full py-20  sm:h-[80vh] px-4 md:px-8 xl:px-16 flex justify-center items-center sm:grid sm:grid-cols-2">
         <div className="flex flex-col items-start justify-around h-full">
           <div className="flex flex-col gap-5 md:gap-10">
             <div>
