@@ -4,14 +4,14 @@ import UsesOfSolarPanel from "../component/homesection/UsesofSolarPanel";
 
 function HomePage() {
   return (
-    <div className="w-[100vw]">
+    <div className="w-full">
+      {" "}
+      {/* Changed from w-[100vw] to w-full */}
       <SimpleSlider />
       <HomeProducts />
-
-      <div className="hidden  lg:block">
+      <div className="hidden lg:block">
         <UsesOfSolarPanel />
       </div>
-      
     </div>
   );
 }

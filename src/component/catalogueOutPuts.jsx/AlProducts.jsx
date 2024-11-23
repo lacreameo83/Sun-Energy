@@ -15,10 +15,10 @@ function AlProducts() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto py-10">
+    <div className="w-full  mx-auto px-2 sm:px-0 xl:py-10">
       {/* All Products Grid */}
       {selectedProduct === "allProducts" ? (
-        <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-4">
           <Products
             onClick={() => handleSelectProduct("inverter")}
             name="Inverter"

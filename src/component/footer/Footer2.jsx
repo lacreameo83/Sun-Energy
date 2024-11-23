@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer2() {
   return (
-    <footer className="relative bg-[#34bbb4] mt-5  py-10 px-5">
+    <footer className="relative bg-[#34bbb4]   py-10 px-5">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Section */}
         <div className="space-y-4">
@@ -93,7 +93,7 @@ function Footer2() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm text-white/80">
+      <div className="mt-10 border-t border-white/20 pt-4 sm:text-center text-sm text-white/80">
         <p>&copy; {new Date().getFullYear()} Jus Solar. All rights reserved.</p>
       </div>
     </footer>

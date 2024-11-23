@@ -1,11 +1,5 @@
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
 
 @tailwind base;
 @tailwind components;
@@ -13,36 +7,31 @@
 
 body {
   font-family: Montserrat;
-  font-size: small;
+  font-size: clamp(12px, 1.5vw, 16px); /* Responsive font size */
 }
+
 .footer {
   font-family: Commissioner;
 }
 
 .glass-div {
-  /* width: 95vw; */
-  height: fit;
-background-color: rgba(255, 255, 255, 0.3);;
-  backdrop-filter: blur(15px); 
+  width: 100%; /* Changed from vw to % for better scaling */
+  height: auto; /* Adjusted for content fit */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* background-color: white; */
 }
-
-
-
-
-
 
 @keyframes moveBall {
   0% {
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(5vw, -3vh); 
+    transform: translate(20%, -15%); /* Changed vw/vh to percentages for better responsiveness */
   }
   100% {
-    transform: translate(-3vw, 5vh);
+    transform: translate(-15%, 20%);
   }
 }
 
@@ -70,15 +59,15 @@ background-color: rgba(255, 255, 255, 0.3);;
   background-size: contain;
 }
 
-.hoverItems:hover{
+.hoverItems:hover {
   color: #24e9d9;
   cursor: pointer;
   transform: scale(1.1);
-  transition: 1s ease-in ;
+  transition: transform 1s ease-in, color 1s ease-in; /* Explicit transitions */
 }
 
 .HomeRenewed {
-  stroke-width: 100px;
+  stroke-width: clamp(20px, 5vw, 100px); /* Responsive stroke width */
   color: rgb(252, 247, 247);
   font-weight: 900;
 }
@@ -90,19 +79,19 @@ background-color: rgba(255, 255, 255, 0.3);;
 }
 @keyframes customerSupport {
   0% {
-    border: 2px solid green;
+    border: 0.125rem solid green; /* Responsive border width */
   }
   25% {
-    border: 2px solid whitesmoke;
+    border: 0.125rem solid whitesmoke;
   }
   50% {
-    border: 2px solid greenyellow;
+    border: 0.125rem solid greenyellow;
   }
   75% {
-    border: 2px solid whitesmoke;
+    border: 0.125rem solid whitesmoke;
   }
   100% {
-    border: 2px solid green;
+    border: 0.125rem solid green;
   }
 }
 

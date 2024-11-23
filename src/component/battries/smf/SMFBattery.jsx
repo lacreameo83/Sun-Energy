@@ -1,42 +1,69 @@
-import React from 'react'
+import React from "react";
 
-function SMFBattery() {
+function Tubularbattery() {
   return (
-    <div className=" grid grid-cols-2 md:grid-cols-4 gap-5">
-      <div className="shadow-lg">
-        <h2 className="text-center font-[500] p-2">Iwin</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8 py-6">
+      {/* Luminious */}
+      <div className="shadow-lg rounded-lg overflow-hidden flex flex-col items-center">
+        <h2 className="text-center font-semibold text-lg p-4 bg-gray-100 w-full">
+          Luminious
+        </h2>
         <img
-          className="h-[50vh] w-[50vw]"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1d6ncRxpTN9h7uAEW0anqXhmVYD-kttQjxQ&s"
-          alt="Iwin battery"
+          className="h-[200px] w-full object-cover"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmWaCEgMZb55igtM0QB1mK2s5ywn8gYGkuGw&s"
+          alt="Luminious"
         />
       </div>
-      <div className="shadow-lg">
-        <h2 className="text-center font-[500] p-2">Quanta</h2>
+
+      {/* Vercas */}
+      <div className="shadow-lg rounded-lg overflow-hidden flex flex-col items-center">
+        <h2 className="text-center font-semibold text-lg p-4 bg-gray-100 w-full">
+          Vercas
+        </h2>
         <img
-          className="h-[50vh] w-[50vw]"
-          src="https://cdn-ilbaacn.nitrocdn.com/KcSHKBiyCiAwuSvkWvJZipHpSRyeKHBz/assets/images/optimized/rev-49a886d/battery.com.ng/wp-content/uploads/2021/05/quanta-2.jpg"
-          alt="Quanta battery"
+          className="h-[200px] w-full object-cover"
+          src="https://solarmarket.ug/public/uploads/all/ohW9QowpbYuzthD2dVxh8tcC8nlbttDUrSQEX1hQ.webp"
+          alt="Vercas"
         />
       </div>
-      <div className="shadow-lg">
-        <h2 className="text-center font-[500] p-2">Rita </h2>
+
+      {/* Nexpro */}
+      <div className="shadow-lg rounded-lg overflow-hidden flex flex-col items-center">
+        <h2 className="text-center font-semibold text-lg p-4 bg-gray-100 w-full">
+          Nexpro
+        </h2>
         <img
-          className="h-[50vh] w-[50vw]"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS02_OgVHx5NvhxL1z3eqrrBnCq1mGTYS00kw&s"
-          alt="Rita battery"
+          className="h-[200px] w-full object-cover"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoWQiDmeVnvaI-RtmSjHurT46XN3-CFR5urg&s"
+          alt="Nexpro"
         />
       </div>
-      <div className="shadow-lg">
-        <h2 className="text-center font-[500] p-2">C worth</h2>
+
+      {/* Bara */}
+      <div className="shadow-lg rounded-lg overflow-hidden flex flex-col items-center">
+        <h2 className="text-center font-semibold text-lg p-4 bg-gray-100 w-full">
+          Bara
+        </h2>
         <img
-          className="h-[50vh] w-[50vw]"
-          src="https://i0.wp.com/energymall.ng/wp-content/uploads/2023/10/H10a50d40cd7f4465bf0feb89e1825a3bN.jpg_720x720q50.webp?fit=640%2C640&ssl=1"
-          alt="C worth battery"
+          className="h-[200px] w-full object-cover"
+          src="https://pictures-nigeria.jijistatic.net/140012561_NjIwLTU4MS02NjJhNTRhMGIz.webp"
+          alt="Bara"
+        />
+      </div>
+
+      {/* Neoea */}
+      <div className="shadow-lg rounded-lg overflow-hidden flex flex-col items-center">
+        <h2 className="text-center font-semibold text-lg p-4 bg-gray-100 w-full">
+          Neoea
+        </h2>
+        <img
+          className="h-[200px] w-full object-cover"
+          src="https://image.made-in-china.com/202f0j00eZMiJVHzyhcF/12V-250ah-Solar-Battery-for-Storage-Power-System.jpg"
+          alt="Neoea"
         />
       </div>
     </div>
   );
 }
 
-export default SMFBattery
+export default Tubularbattery;

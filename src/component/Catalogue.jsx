@@ -125,7 +125,7 @@ function Catalogue() {
           ))}
         </ul>
       </section>
-      <div className="sm:m-4 w-[70%]  text-white sm:w-[75%] overflow-x-auto sm:overflow-hidden">
+      <div className="sm:m-4   text-white  overflow-x-auto sm:overflow-hidden">
         {isAllProducts && <AlProducts />}
         {isInverter && <FirstDisplayInver />}
         {isBatteries && <BatteriesFirstDisplay />}

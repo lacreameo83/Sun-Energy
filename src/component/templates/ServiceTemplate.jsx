@@ -1,15 +1,20 @@
 function ServiceTemplate({ img, title, uses }) {
   return (
-    <div className="w-[100%]  relative  shadow-lg  sm:h-[27vh] md:h-[37vh]  flex flex-col  items-center p-4 sm:w-[30%] md:w-[100%] bg-[#fffff9] rounded-[12px] ">
-      {/* <div className="relative top-[-55px] h-[60px] w-[60px] rounded-full flex justify-center items-center  shadow-lg  bg-slate-500 "> */}
+    <div className="w-full  mt-8 lg:mt-0 relative shadow-lg flex flex-col items-center p-6 sm:w-[30%] md:w-[100%] bg-white rounded-lg">
+      {/* Image Section */}
       <img
-        className=" h-[70px] w-[70px] rounded-full absolute top-[-15%] md:top-[-10%]  "
+        className="h-16 w-16 rounded-full absolute top-[-12%] md:top-[-10%] border-2 border-teal-500 object-cover"
         src={img}
+        alt={title}
       />
-      {/* </div> */}
 
-      <h3 className="font-[700] text-[15px] mt-10">{title}</h3>
-      <p className="text-justify text-[10px] sm:text-[18px] lg:text-[12px] font-[300]">
+      {/* Title */}
+      <h3 className="font-bold text-lg text-center mt-12 sm:mt-14 text-teal-700">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-justify text-sm sm:text-base lg:text-sm font-light mt-4 leading-relaxed text-gray-700">
         {uses}
       </p>
     </div>

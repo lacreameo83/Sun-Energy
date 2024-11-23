@@ -1,38 +1,31 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
-import { Globalcontext } from "../context/Globlacontext";
 import Image from "../../../public/assets/jus-Solat-Logo.png";
-
 function NavSection() {
-  const { search, handleSearch } = useContext(Globalcontext);
-
-  // useEffect(() => {
-  //   SearchOutPut();
-  // }, [search]);
   return (
-    <div className="flex w-[100vw]  items-center gap-[1px]  text-[10px]  lg:gap-[110em] ">
+    <div className="flex w-full items-center gap-2 justify-between text-xs sm:text-sm">
       <div>
-        <img src={Image} alt="jus solar company logo" className="w-10" />
+        <img
+          src={Image}
+          alt="jus solar company logo"
+          className="w-10 flex-shrink-0"
+        />
       </div>
       <div>
-        <ul className="flex gap-1  sm:text-[13px] font-bold   sm:gap-5 items-center  md:gap-3 ">
+        <ul className="flex gap-2 sm:gap-4 md:gap-6 font-bold items-center list-none p-0 m-0">
           <Link to="/">
-            <li className="hoverItems  ">Home</li>
+            <li className="hoverItems">Home</li>
           </Link>
-          <Link to="about">
+          <Link to="/about">
             <li className="hoverItems">About</li>
           </Link>
-          <Link to="catalogue">
-            <li className="hoverItems">Catalogue </li>
+          <Link to="/catalogue">
+            <li className="hoverItems">Catalogue</li>
           </Link>
-
-          {/* <li className="hover:text-green-300">Blog</li> */}
-          <Link to="contact">
-            <li className="hoverItems">Contact </li>
+          <Link to="/contact">
+            <li className="hoverItems">Contact</li>
           </Link>
           <Link to="/projects">
-            <li>Projects</li>
+            <li className="hoverItems">Projects</li>
           </Link>
         </ul>
       </div>

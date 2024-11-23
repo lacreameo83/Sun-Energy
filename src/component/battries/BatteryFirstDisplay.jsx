@@ -1,63 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import SMFBattery from "./smf/SMFBattery";
 import Tubularbattery from "./tubular/Tubularbattery";
 import Lithiumbattery from "./lithium/Lithiumbattery";
-import { useContext } from "react";
 import { Globalcontext } from "../context/Globlacontext";
 import Products from "../templates/Products";
 
 function BatteriesFirstDisplay() {
   const { batterydisplay, setbatterydisplay } = useContext(Globalcontext);
-  const [smfproduct, setSMFproduct] = useState(false);
-  const [tubularBatteries, setTubularBatteries] = useState(false);
-  const [lithiumBatteries, setLithiumBatteries] = useState(false);
+  const [activeProduct, setActiveProduct] = useState(null);
 
-  const handleSMFproduct = () => {
-    setSMFproduct(true);
+  const handleProductClick = (product) => {
+    setActiveProduct(product);
     setbatterydisplay(false);
-    setTubularBatteries(false);
-    setLithiumBatteries(false);
-  };
-
-  const handleTubularBatteries = () => {
-    setTubularBatteries(true);
-    setbatterydisplay(false);
-    setSMFproduct(false);
-    setLithiumBatteries(false);
-  };
-
-  const handleLithiumBatteries = () => {
-    setLithiumBatteries(true);
-    setTubularBatteries(false);
-    setbatterydisplay(false);
-    setSMFproduct(false);
   };
 
   return (
-    <div className="w-full md:w-[80vw] mx-auto">
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6">
       {batterydisplay ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-7 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <Products
-            onClick={handleSMFproduct}
+            onClick={() => handleProductClick("SMF")}
             name="SMF Battery"
             img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMg5zmOFmiSZ9-nH_G5_pAgHpuXBDVe4ouDg&s"
+            className="hover:scale-105 transition-transform duration-300"
           />
           <Products
-            onClick={handleTubularBatteries}
+            onClick={() => handleProductClick("Tubular")}
             name="Tubular Batteries"
             img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2rPAsieTyY0rr7eK1aUM2PDKtCw0bOHKQ8Q&s"
+            className="hover:scale-105 transition-transform duration-300"
           />
           <Products
-            onClick={handleLithiumBatteries}
+            onClick={() => handleProductClick("Lithium")}
             name="Lithium Batteries"
             img="https://cdn-enoih.nitrocdn.com/kzltgafZecVglpUbyWKFCjKzSdhSUWWa/assets/images/optimized/rev-103eb43/sakopower.com/wp-content/uploads/2022/09/Li-Sun-3.jpg"
+            className="hover:scale-105 transition-transform duration-300"
           />
         </div>
       ) : (
         <div>
-          {smfproduct && <SMFBattery />}
-          {tubularBatteries && <Tubularbattery />}
-          {lithiumBatteries && <Lithiumbattery />}
+          {activeProduct === "SMF" && <SMFBattery />}
+          {activeProduct === "Tubular" && <Tubularbattery />}
+          {activeProduct === "Lithium" && <Lithiumbattery />}
         </div>
       )}
     </div>
