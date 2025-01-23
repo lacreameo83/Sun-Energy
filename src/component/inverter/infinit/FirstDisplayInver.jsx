@@ -65,7 +65,7 @@ function FirstDisplayInver() {
             className="shadow-lg h-[40vh] md:h-[50vh] p-4 cursor-pointer hover:scale-105 transition-transform duration-300 bg-white rounded-md"
           >
             <h2 className="text-center font-semibold text-lg md:text-xl">
-              Luminious Inverter Products
+              Luminous Inverter Products
             </h2>
             <img
               className="h-[30vh] md:h-[35vh] w-full object-cover mt-2 rounded-md"
@@ -77,11 +77,13 @@ function FirstDisplayInver() {
       )}
 
       {/* Product Details */}
-      <div>
-        {infinitproduct && <InfinitInverter />}
-        {felicityProduct && <FelicityInverter />}
-        {lumionsinverter && <LuminiousInverter />}
-      </div>
+      {!inverterdisplay && (
+        <div>
+          {!infinitproduct && <InfinitInverter />}
+          {!felicityProduct && <FelicityInverter />}
+          {!lumionsinverter && <LuminiousInverter />}
+        </div>
+      )}
     </div>
   );
 }

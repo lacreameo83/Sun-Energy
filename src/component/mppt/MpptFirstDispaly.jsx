@@ -26,35 +26,49 @@ function MpptFirstDisplay() {
   };
 
   return (
-    <div className="w-[80vw]">
+    <div className="w-full md:w-[80vw] mx-auto">
       {mpptdisplay !== undefined ? (
-        <div className="grid grid-cols-2 md:grid-cols-3 w-[70vw] gap-7">
-          <div className="shadow-lg cursor-pointer" onClick={handleSMFproduct}>
-            <h2 className="text-center p-2 font-[500]">Infini Solar</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {/* Infini Solar */}
+          <div
+            className="shadow-lg bg-white rounded-lg overflow-hidden cursor-pointer hover:shadow-xl hover:scale-105 transition-transform duration-300"
+            onClick={handleSMFproduct}
+          >
+            <h2 className="text-center p-3 text-lg font-semibold text-gray-800 hover:text-blue-600 transition-colors">
+              Infini Solar
+            </h2>
             <img
-              className="h-[50vh] w-[50vw] object-cover"
+              className="h-[30vh] sm:h-[40vh] md:h-[50vh] w-full object-cover"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThc2zK2HDouOnaGMLzvoPevE-JQftqFkE5cQ&s"
               alt="Infini product"
             />
           </div>
+
+          {/* Felicity */}
           <div
-            className="shadow-lg cursor-pointer"
+            className="shadow-lg bg-white rounded-lg overflow-hidden cursor-pointer hover:shadow-xl hover:scale-105 transition-transform duration-300"
             onClick={handleTubularBatteries}
           >
-            <h2 className="text-center font-[500] p-2">Felicity</h2>
+            <h2 className="text-center p-3 text-lg font-semibold text-gray-800 hover:text-blue-600 transition-colors">
+              Felicity
+            </h2>
             <img
-              className="h-[50vh] w-[50vw] object-cover"
+              className="h-[30vh] sm:h-[40vh] md:h-[50vh] w-full object-cover"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaOnPqs31JDc42B_IUzBYj8taKuPKPn0QCbw&s"
               alt="Felicity inverter"
             />
           </div>
+
+          {/* Must */}
           <div
-            className="shadow-lg cursor-pointer"
+            className="shadow-lg bg-white rounded-lg overflow-hidden cursor-pointer hover:shadow-xl hover:scale-105 transition-transform duration-300"
             onClick={handleLithiumBatteries}
           >
-            <h2 className="text-center font-[500] p-2">Must</h2>
+            <h2 className="text-center p-3 text-lg font-semibold text-gray-800 hover:text-blue-600 transition-colors">
+              Must
+            </h2>
             <img
-              className="h-[50vh] w-[50vw] object-cover"
+              className="h-[30vh] sm:h-[40vh] md:h-[50vh] w-full object-cover"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-PainpSwkoFUtR2dKkHZeePNuWBDrYDyDw&s"
               alt="Must inverter"
             />
@@ -63,9 +77,13 @@ function MpptFirstDisplay() {
       ) : (
         <div>
           {/* Conditionally render battery components */}
-          {smfproduct && <div>SMF Battery Component</div>}
-          {tubularBatteries && <div>Tubular Battery Component</div>}
-          {lithiumBatteries && <div>Lithium Battery Component</div>}
+          {smfproduct && <div className="p-4">SMF Battery Component</div>}
+          {tubularBatteries && (
+            <div className="p-4">Tubular Battery Component</div>
+          )}
+          {lithiumBatteries && (
+            <div className="p-4">Lithium Battery Component</div>
+          )}
         </div>
       )}
     </div>
